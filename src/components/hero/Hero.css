@@ -1,0 +1,128 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.hero__inner {
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--edge-padding);
+  width: 100%;
+  position: relative;
+}
+
+.hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-fill);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-lg);
+  animation: fade-in-up 900ms var(--ease-out) both;
+}
+
+.hero__kicker-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px 2px var(--accent-cyan);
+}
+
+.hero__title {
+  font-size: var(--fs-5xl);
+  max-width: 15ch;
+  animation: fade-in-up 900ms 80ms var(--ease-out) both;
+}
+
+.hero__role {
+  display: inline-block;
+  background: linear-gradient(100deg, var(--accent-amber), var(--accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: role-swap 520ms var(--ease-out);
+
+  i{
+    color: white;
+  }
+}
+
+.hero__intro {
+  margin-top: var(--space-lg);
+  max-width: 52ch;
+  font-size: var(--fs-lg);
+  color: var(--text-secondary);
+  animation: fade-in-up 900ms 160ms var(--ease-out) both;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  animation: fade-in-up 900ms 240ms var(--ease-out) both;
+}
+
+.hero__scroll-cue {
+  position: absolute;
+  bottom: -5rem;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  animation: bob 2.4s var(--ease-in-out) infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes role-swap {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 7.5rem;
+  }
+  .hero__scroll-cue {
+    display: none;
+  }
+}

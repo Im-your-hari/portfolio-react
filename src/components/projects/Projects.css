@@ -1,0 +1,23 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.projects-grid__item {
+  display: flex;
+}
+
+.projects-grid__item .project-card {
+  width: 100%;
+}
+
+.projects-grid__item:first-child {
+  grid-column: span 2;
+}
+
+@media (max-width: 780px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

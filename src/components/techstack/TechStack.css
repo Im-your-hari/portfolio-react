@@ -1,0 +1,17 @@
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+@media (max-width: 720px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
