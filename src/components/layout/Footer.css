@@ -1,0 +1,15 @@
+.footer {
+  padding: var(--space-lg) var(--edge-padding) var(--space-xl);
+  border-top: 1px solid var(--glass-border);
+}
+
+.footer__inner {
+  max-width: var(--content-width);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+}

@@ -1,0 +1,47 @@
+.contact-card {
+  position: relative;
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-card__glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(255, 180, 84, 0.16), transparent 70%);
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.contact-card__title {
+  font-size: var(--fs-3xl);
+  margin-top: var(--space-sm);
+  max-width: 16ch;
+}
+
+.contact-card__copy {
+  color: var(--text-secondary);
+  max-width: 44ch;
+  margin-top: var(--space-sm);
+}
+
+.contact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .contact-card {
+    padding: var(--space-xl) var(--space-md);
+  }
+}

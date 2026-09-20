@@ -1,0 +1,50 @@
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 20% -10%, #2f00ff 0%, rgb(1, 2, 29) 95%);
+  /* background: ; radial-gradient(ellipse at 50% -10%, #0d1420 0%, var(--bg-base) 55%); */
+}
+
+.ambient__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 40%, transparent 90%);
+}
+
+.ambient__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ambient__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.22;
+}
+
+.ambient__glow--amber {
+  width: 480px;
+  height: 480px;
+  top: -120px;
+  left: 8%;
+  background: var(--accent-amber);
+}
+
+.ambient__glow--cyan {
+  width: 520px;
+  height: 520px;
+  top: 30%;
+  right: -8%;
+  background: var(--accent-cyan);
+  opacity: 0.14;
+}

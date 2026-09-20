@@ -1,0 +1,76 @@
+:root {
+  /* ---- Color: deep navy-void base, warm amber + cool cyan dual accent ---- */
+  --void: #05070c;
+  --bg-base: #070a11;
+  --bg-surface: #0c111b;
+  --bg-surface-raised: #111726;
+  --glass-fill: rgba(255, 255, 255, 0.045);
+  --glass-fill-hover: rgba(255, 255, 255, 0.075);
+  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-border-strong: rgba(255, 255, 255, 0.16);
+
+  --accent-amber: #ffb454;
+  --accent-amber-soft: rgba(255, 180, 84, 0.14);
+  --accent-cyan: #5eead4;
+  --accent-cyan-soft: rgba(94, 234, 212, 0.14);
+  --accent-violet: #8b7cff;
+
+  --text-primary: #f2f4f8;
+  --text-secondary: #9aa5b4;
+  --text-tertiary: #5c6773;
+  --text-on-accent: #05070c;
+
+  --success: #5eead4;
+  --danger: #ff6b6b;
+
+  /* ---- Type ---- */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+
+  --fs-2xs: 0.72rem;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1.0625rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.6rem;
+  --fs-2xl: 2.1rem;
+  --fs-3xl: 2.9rem;
+  --fs-4xl: 4rem;
+  --fs-5xl: 5.4rem;
+
+  /* ---- Space ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 800ms;
+
+  --content-width: 1180px;
+  --edge-padding: clamp(1.25rem, 5vw, 4rem);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --fs-5xl: 3rem;
+    --fs-4xl: 2.4rem;
+    --fs-3xl: 1.9rem;
+    --fs-2xl: 1.5rem;
+    --fs-xl: 1.25rem;
+  }
+}
